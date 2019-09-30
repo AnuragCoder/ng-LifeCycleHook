@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MenuForNavService } from './service/menu-for-nav.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngPractice';
+  route : any;
+  constructor(nav: MenuForNavService){
+    
+    this.route  = nav.route;
+  
+  }
+
 }
