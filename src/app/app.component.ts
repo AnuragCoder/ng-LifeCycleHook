@@ -12,6 +12,7 @@ export class AppComponent {
   constructor(nav: MenuForNavService){
     
     this.route  = nav.route;
+    console.log(this.route);
   
   }
 

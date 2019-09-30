@@ -1,5 +1,11 @@
-<div class="sidenav" *ngFor="let menu of route">
-  <a routerLink="/lsh">{{menu.name}}</a>
+<div class="sidenav" >
+  <ul>
+    <li *ngFor="let menu of route">
+        <a routerLink="{{menu.route}}">{{menu.name}}</a>
+    </li>
+      
+  </ul>
+  
 </div>
 <!-- <routing-link> </routing-link> -->
 <div class="main">

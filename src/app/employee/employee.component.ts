@@ -9,12 +9,12 @@ import { Employee } from '../module/employee';
 })
 export class EmployeeComponent implements OnInit, OnChanges {
 
-  @Input employee: Employee;
-  @Input message : string;
+  @Input() employee: Employee;
+  @Input() message : string;
 
 
 
-  constructor() { }
+  constructor(public name : string , public age : number) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,6 @@
 import { Component, OnChanges , OnInit , Input , SimpleChanges  } from '@angular/core';
+import { Employee } from '../module/employee';
+
 
 //SimpleChange  =  is a class that represent besic change from previous to new . 
 //if there is change in the input value then there are property of SimpleChange to detect it 
@@ -21,11 +23,26 @@ import { Component, OnChanges , OnInit , Input , SimpleChanges  } from '@angular
   templateUrl: './ngonchanges-child.component.html',
   styleUrls: ['./ngonchanges-child.component.css']
 })
-export class NgonchangesChildComponent implements OnInit {
+export class NgonchangesChildComponent implements OnInit , OnChanges {
+
+  @Input() employee: Employee;
+  @Input() message: string;
+
+  allMesChangeLogs: string[] = [];
+  allEmpChangeLog: string[] = [];
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  ngOnChanges(changes : SimpleChanges){
+
+    console.log(changes);
+   // let change = changes[propName];
+  
+
+  }
+
 
 }

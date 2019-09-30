@@ -1,1 +1,38 @@
-<p>ngonchanges-parent works!</p>
+<H1> ngOnChange Hook </H1>
+
+<p> Angular provides lifecycle hooks for change detection. </p>
+<p> <b>OnChanges</b> is an <b>interface</b> and has a method declaration i.e <b>ngOnChanges()</b> </p>
+<p> In this example : parent component changes the value of child component Using <b>@Input</b> decorator</p>
+<p> When value changes in the child component , <b>ngOnChange</b> methord runs automatically </p>
+<p> The method ngOnChanges() uses SimpleChanges as an argument that gives new and previous value of input values after changes</p>
+
+<h3> SimpleChange Class and SimpleChanges Interface </h3>
+
+<p> SimpleChanges Use following property to detect changes -: </p>
+<p> <b>previousValue : </b> Keeps previous property of input property </p>
+<p> <b>currentValue: </b> Keeps current value of input property. </p>
+<p> <b>isFirstChange() : </b> Boolean value that tells whether the new value is the first value assigned. </p>
+
+<div class="example1">
+<div class='employee'>
+ <form #empForm='ngForm' (ngSubmit)="onFormSubmit(empForm)">
+   <p> Name : <input name="name" [ngModel]='emp.name'>  </p>
+   <p> Age: <input name="age" [ngModel]="emp.age"> 
+    <button> Submit </button>
+ </form>   
+</div>
+
+<div class="message">
+   <p>Message: <input [(ngModel)]='msg'/> </p>
+</div>
+
+
+
+
+</div>
+
+<NgonchangesChildComponent [employee]='emp'></NgonchangesChildComponent> 
+
+
+   
+

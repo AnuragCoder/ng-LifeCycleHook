@@ -7,21 +7,27 @@ import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.compon
 import { NgonchangesParentComponent } from './ngonchanges-parent/ngonchanges-parent.component';
 import { NgonchangesChildComponent } from './ngonchanges-child/ngonchanges-child.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FormsModule } from '@angular/forms';
+import { MenuForNavService } from './service/menu-for-nav.service';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LifeCycleHookComponent,
-    NgonchangesParentComponent,
     NgonchangesChildComponent,
+    NgonchangesParentComponent,
+    
     EmployeeComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [MenuForNavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,6 +16,11 @@ export class MenuForNavService {
       'name' : 'Life Cycle Hook',
       'disabled' : false,
       'route': '/lsh',
+    },
+    {
+      'name': 'ngOnChange',
+      'disabled' : false,
+      'route': '/ngOnchangeExample1',
     }
 
   ];
