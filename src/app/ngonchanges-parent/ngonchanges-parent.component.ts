@@ -13,16 +13,18 @@ export class NgonchangesParentComponent implements OnInit {
 
 
 
-  
+
   emp = new Employee('Anurag' , 24);
   msg: string = 'Hello World!';
 
-  constructor(){}
+  constructor() {}
 
   onFormSubmit(empForm: NgForm){
-     let name = empForm.control['name'].value;
-     let age = empForm.control['age'].value;
-     this.emp = new Employee(name,age);
+
+     const name = empForm.controls['name'].value;
+     const age = empForm.controls['age'].value;
+     this.emp = new Employee(name, age);
+     console.log(this.emp);
   }
 
   ngOnInit() {

@@ -16,10 +16,10 @@
 <div class="example1">
 <div class='employee'>
  <form #empForm='ngForm' (ngSubmit)="onFormSubmit(empForm)">
-   <p> Name : <input name="name" [ngModel]='emp.name'>  </p>
-   <p> Age: <input name="age" [ngModel]="emp.age"> 
+   <p> Name : <input type='text' name="name"  [(ngModel)]='emp.name'>  </p>
+   <p> Age: <input type='text' name="age" [(ngModel)]="emp.age">
     <button> Submit </button>
- </form>   
+ </form>
 </div>
 
 <div class="message">
@@ -31,8 +31,8 @@
 
 </div>
 
-<NgonchangesChildComponent [employee]='emp'></NgonchangesChildComponent> 
+<app-ngonchanges-child [employee]='emp'></app-ngonchanges-child>
 
 
-   
+
 
